@@ -14,8 +14,122 @@
   }
 }
 
+.border {
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+  clip-path: polygon(
+    10% 50%,
+    20% 0%,
+    90% 0%,
+    100% 50%,
+    100% 50%,
+    90% 100%,
+    20% 100%,
+    10% 50%
+  );
+}
+
+.border-poly {
+  clip-path: polygon(
+    10% 0%,
+    0% 0%,
+    90% 0%,
+    100% 0%,
+    100% 90%,
+    96% 100%,
+    14% 100%,
+    10% 90%
+  );
+  border: "none";
+}
+
+.line {
+  position: absolute;
+  width: 2px;
+  z-index: 120;
+  background-color: rgb(147, 109, 179);
+  transform-origin: 0 50%;
+}
+.line1 {
+  top: 0%;
+  left: 50%;
+  height: 100%;
+  transform: rotate(0deg);
+}
+
+.line2 {
+  top: -1%;
+  left: 51.5%;
+  height: 99%;
+  transform: rotate(45deg);
+}
+
+.line3 {
+  top: 0.1%;
+  left: 50%;
+  height: 100%;
+  transform: rotate(90deg);
+}
+
+.line4 {
+  top: -0.8%;
+  left: 54.3%;
+  height: 110%;
+  transform: rotate(135.5deg);
+}
+::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* Hides scrollbar for IE and Edge */
+  scrollbar-width: none;   
+}
+
+.flower-selector {
+  text-align: center;
+  padding: 20px;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 90px 0;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  clip-path: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)";
+  transition: background-color 0.3s;
+}
+
+.flowers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flower-btn {
+  text-transform: capitalize;
+  font-size: large;
+  max-width: 200px;
+  height: 80px;
+  clip-path: polygon(
+    10% 50%,
+    20% 0%,
+    90% 0%,
+    100% 50%,
+    100% 50%,
+    90% 100%,
+    20% 100%,
+    10% 50%
+  );
 }
